@@ -43,7 +43,7 @@ onMounted(async ()=>{
   <p v-if="status === 'active'">user is active</p>
   <p v-else-if="status === 'pending'">user is pending</p>
   <p v-else>user is inactive</p>
-
+  <button @click="toggleStatus">Change status</button>
   <form @submit.prevent="addTask">
     <label for="newTask">Add Task</label>
     <input type="text" id="newTask" name="NewTask" v-model="newTask"/>
@@ -61,5 +61,5 @@ onMounted(async ()=>{
   </ul>
   <!-- <a v-bind:href="link">Click for google link</a> -->
 <br/>
-  <button @click="toggleStatus">Change status</button>
+
 </template>
